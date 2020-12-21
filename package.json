@@ -4,14 +4,14 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"dev": "concurrently --kill-others \"npm run watch-sass\" \"npm run watch-pug\" \"npm run watch-ts\"",
+		"dev": "rimraf dist && concurrently --kill-others \"npm run watch-sass\" \"npm run watch-pug\" \"npm run watch-ts\"",
+		"deploy": "rimraf dist && npm run build-sass && npm run build-pug && npm run build-ts",
 		"build-sass": "node-sass src/style.sass -o dist",
 		"watch-sass": "node-sass -w src/style.sass -o dist",
 		"build-pug": "pug src/index.pug -P -o dist",
 		"watch-pug": "pug -w src/index.pug -P -o dist",
-		"build-ts": "tsc",
-		"watch-ts": "tsc -w --pretty",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"build-ts": "tsc --sourceMap false",
+		"watch-ts": "tsc -w --pretty"
 	},
 	"author": "",
 	"license": "ISC",
@@ -22,6 +22,7 @@
 		"node-sass": "^5.0.0",
 		"pug": "^3.0.0",
 		"pug-cli": "^1.0.0-alpha6",
+		"rimraf": "^3.0.2",
 		"tsc": "^1.20150623.0",
 		"typescript": "^4.1.3"
 	},
