@@ -15,7 +15,7 @@ Just run `npm install` in root folder.
 
 ## How to work with
 
-1. Run `watch-sass`, `watch-pug` and `watch-ts` from npm-scripts
+1. Run `dev` from npm-scripts
 1. Run `Live Server` from VSCode (Live Server extension required)
 1. Write some code to the files located in `src` folder or create your own files (but leave em in `src`)
 1. If you need to debug your \*.ts files, launch `Launch Chrome against localhost` from VSCode (Debugger for Chrome extension required)
