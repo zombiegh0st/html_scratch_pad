@@ -10,7 +10,7 @@
 		"build-pug": "pug src/index.pug -P -o dist",
 		"watch-pug": "pug -w src/index.pug -P -o dist",
 		"build-ts": "tsc",
-		"watch-ts": "tsc -w",
+		"watch-ts": "tsc -w --pretty",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"author": "",
