@@ -1,0 +1,27 @@
+{
+	"name": "html_scratch_pad",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build-sass": "node-sass src/style.sass -o dist",
+		"watch-sass": "node-sass -w src/style.sass -o dist",
+		"build-pug": "pug src/index.pug -P -o dist",
+		"watch-pug": "pug -w src/index.pug -P -o dist",
+		"build-ts": "tsc",
+		"watch-ts": "tsc -w",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/jquery": "^3.5.1",
+		"jquery": "^3.5.1",
+		"node-sass": "^5.0.0",
+		"pug": "^3.0.0",
+		"pug-cli": "^1.0.0-alpha6",
+		"tsc": "^1.20150623.0",
+		"typescript": "^4.1.3"
+	},
+	"dependencies": {}
+}
